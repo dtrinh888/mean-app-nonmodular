@@ -1,13 +1,16 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'git:push' ]
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'git:rebase' ]
 2 info using npm@2.15.0
 3 info using node@v4.4.2
-4 verbose run-script [ 'pregit:push', 'git:push', 'postgit:push' ]
-5 info pregit:push mean-stack@1.0.0
-6 info git:push mean-stack@1.0.0
+4 verbose run-script [ 'pregit:rebase', 'git:rebase', 'postgit:rebase' ]
+5 info pregit:rebase mean-stack@1.0.0
+6 info git:rebase mean-stack@1.0.0
 7 verbose unsafe-perm in lifecycle true
-8 info mean-stack@1.0.0 Failed to exec git:push script
-9 verbose stack Error: mean-stack@1.0.0 git:push: `npm run git:checkout:gh-pages && npm run git:add && npm run git:commit && npm run git:push:gh-pages`
+8 info mean-stack@1.0.0 Failed to exec git:rebase script
+9 verbose stack Error: mean-stack@1.0.0 git:rebase: `npm run git:checkout:master && npm run git:rebase:gh-pages && npm run git:push:master && npm run git:checkout:gh-pages`
 9 verbose stack Exit status 1
 9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
 9 verbose stack     at emitTwo (events.js:87:13)
@@ -20,17 +23,17 @@
 10 verbose pkgid mean-stack@1.0.0
 11 verbose cwd /Users/davidtrinh/Desktop/projects/Thinkful/mean-app-nonmodular/app
 12 error Darwin 15.4.0
-13 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "git:push"
+13 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "git:rebase"
 14 error node v4.4.2
 15 error npm  v2.15.0
 16 error code ELIFECYCLE
-17 error mean-stack@1.0.0 git:push: `npm run git:checkout:gh-pages && npm run git:add && npm run git:commit && npm run git:push:gh-pages`
+17 error mean-stack@1.0.0 git:rebase: `npm run git:checkout:master && npm run git:rebase:gh-pages && npm run git:push:master && npm run git:checkout:gh-pages`
 17 error Exit status 1
-18 error Failed at the mean-stack@1.0.0 git:push script 'npm run git:checkout:gh-pages && npm run git:add && npm run git:commit && npm run git:push:gh-pages'.
+18 error Failed at the mean-stack@1.0.0 git:rebase script 'npm run git:checkout:master && npm run git:rebase:gh-pages && npm run git:push:master && npm run git:checkout:gh-pages'.
 18 error This is most likely a problem with the mean-stack package,
 18 error not with npm itself.
 18 error Tell the author that this fails on your system:
-18 error     npm run git:checkout:gh-pages && npm run git:add && npm run git:commit && npm run git:push:gh-pages
+18 error     npm run git:checkout:master && npm run git:rebase:gh-pages && npm run git:push:master && npm run git:checkout:gh-pages
 18 error You can get information on how to open an issue for this project with:
 18 error     npm bugs mean-stack
 18 error Or if that isn't available, you can get their info via:
