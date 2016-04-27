@@ -27,6 +27,7 @@ app.controller('MainCtrl', ['$scope', 'postsFactory', function($scope, postsFact
 			title: $scope.title,
 			link: $scope.link,
 			upvotes: 0, 
+			// array of fake comments to the posts object, this helps us mock up the basic comments view
 			comments: [
 				{
 					author: 'Joe',
