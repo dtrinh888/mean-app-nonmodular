@@ -1,3 +1,5 @@
+// This file is the launching point of app. We use it to import all other server files including
+// modules, configure routes, open database connections, and just about anything else we can think of
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');

@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// used to contain executable scripts
+
 /**
  * Module dependencies.
  */
