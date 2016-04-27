@@ -51,8 +51,22 @@ app.controller('MainCtrl', ['$scope', 'postsFactory', function($scope, postsFact
 }]);
 
 app.controller('PostsCtrl', ['$scope', '$stateParams', 'postsFactory', function($scope, $stateParams, postsFactory){
+
 	//scope object that grabs the appropriate post from the postsFactory using the id from $stateParams
 	$scope.post = postsFactory.posts[$stateParams.id];
+
+	// function to all user to create new comments
+	$scope.addComment = function(){
+		if($scope.body === ''){
+			return;
+		}
+		$scope.post.comments.push({
+			body: $scope.body,
+			author: 'user',
+			upvotes: 0
+		});
+		$scope.body = '';
+	};
 }]);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
